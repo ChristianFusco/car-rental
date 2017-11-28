@@ -1,8 +1,8 @@
-### CSI-340-01: Software Specialties - Fall 2017 (2017FA)
+# CSI-340-01: Software Specialties - Fall 2017 (2017FA)
 
 To access UML diagram in a way that isn't a pain, use draw.io.  Sign in using Github, give it access to this repository.  Ezpz lemon squeezy.
 
-# Patterns
+### Patterns
 
 Strategy - Use for payment methods / length of rent 
 Decorator - Add car parts / add discounts or fees
@@ -12,7 +12,7 @@ Proxy - delegate payment methods
 State - We run out of cars????
 
 
-# Requirements / Use Cases
+### Requirements / Use Cases
 
 Rent a car
 Return a car
