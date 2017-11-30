@@ -1,3 +1,3 @@
 interface Car {
-	public void getThing();
+	public String getType();
 }
