@@ -1,3 +1,3 @@
-interface Car {
+public interface Car {
 	public String getType();
 }

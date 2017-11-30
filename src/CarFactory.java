@@ -1,3 +1,3 @@
-interface CarFactory {
+public interface CarFactory {
 	public Car makeCar();
 }
