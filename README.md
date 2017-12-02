@@ -1,8 +1,22 @@
 # CSI-340-01: Software Specialties - Fall 2017 (2017FA)
 
-To access UML diagram in a way that isn't a pain, use draw.io.  Sign in using Github, give it access to this repository.  Ezpz lemon squeezy.
+## Using the project in Eclipse without git shell nonsense
 
-### Patterns
+### Importing
+* On the settings bar, go to Window->Show View->Other.  
+* Go to the git directory and open the git respository view.
+* Hit "Clone a new respository" and then log enter your login information.
+* Mash that next button.
+* At the end, under projects, check the box to import the java project.
+
+### Committing and pushing
+* Right click the respository in the git repository view.
+* Hit commit.
+* Right click the files you want to commit and hit "Add to Index".
+* Leave a message.
+* Hit "Commit and Push"
+
+## Patterns
 
 Strategy - Use for payment methods / length of rent 
 Decorator - Add car parts / add discounts or fees
@@ -12,7 +26,7 @@ Proxy - delegate payment methods
 State - We run out of cars????
 
 
-### Requirements / Use Cases
+## Requirements / Use Cases
 
 Rent a car
 Return a car
