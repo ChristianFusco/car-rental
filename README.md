@@ -9,6 +9,10 @@
 * Mash that next button.
 * At the end, under projects, check the box to import the java project.
 
+* You might need to set the "src" folder as the source folder
+* Right click the "src" folder in the explorer
+* Build Path -> Use as source folder
+
 ### Committing and pushing
 * Right click the respository in the git repository view.
 * Hit commit.
