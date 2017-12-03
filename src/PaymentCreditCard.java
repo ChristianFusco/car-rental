@@ -14,7 +14,7 @@ public class PaymentCreditCard implements PaymentBehavior {
 		this.expireDate = expireDate;
 	}
 
-	public void makePayment(int amount) {
+	public void makePayment(double amount) {
 		if(!validate()) {
 			System.out.println("Transaction Canceled.");
 			return;

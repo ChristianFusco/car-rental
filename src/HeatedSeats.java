@@ -8,4 +8,8 @@ public class HeatedSeats extends CarDecorator {
 	public double getPrice() {
 		return decoratedCar.getPrice() + price;
 	}
+	
+	public String getType() {
+		return decoratedCar.getType() + " with " + name;
+	}
 }

@@ -15,6 +15,7 @@ public class RentalShop {
 		sedan = new Radio(sedan);
 		System.out.println("Added radio\nSedan Price: " + sedan.getPrice());
 		
+		System.out.println(sedan.getType());
 	//Behavior Test
 		PaymentBehavior paymentBehavior = new PaymentCreditCard(
 			"1111111111111111", "Testname", "123", "2018/07");

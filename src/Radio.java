@@ -8,4 +8,8 @@ public class Radio extends CarDecorator {
 	public double getPrice() {
 		return decoratedCar.getPrice() + price;
 	}
+	
+	public String getType() {
+		return decoratedCar.getType() + " with " + name;
+	}
 }

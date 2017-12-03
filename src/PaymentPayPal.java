@@ -10,7 +10,7 @@ public class PaymentPayPal implements PaymentBehavior {
 		this.password = password;
 	}
 
-	public void makePayment(int amount) {
+	public void makePayment(double amount) {
 		if(!validate()) {
 			System.out.println("Transaction Canceled.");
 			return;

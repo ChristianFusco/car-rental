@@ -8,8 +8,6 @@ public abstract class CarDecorator implements Car {
 	}
 
 	public abstract double getPrice();
-
-	public String getType() {
-		return name;
-	}
+	public abstract String getType();
+	
 }

@@ -1,4 +1,4 @@
 public interface PaymentBehavior {
-	public void makePayment(int amount);
+	public void makePayment(double amount);
 	public boolean validate();
 }

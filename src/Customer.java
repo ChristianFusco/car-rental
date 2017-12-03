@@ -1,14 +1,20 @@
 public class Customer {
 	private String name;
 	private PaymentBehavior paymentBehavior;
+	private Car car;
 
 	Customer(String name, PaymentBehavior paymentBehavior) {
 		this.name = name;
 		this.paymentBehavior = paymentBehavior;
+		this.car = null;
 	}
 
-	public void makePayment(int amount) {
+	public void makePayment(double amount) {
 		paymentBehavior.makePayment(amount);
+	}
+	
+	public void setCar(Car car) {
+		this.car = car;
 	}
 	
 	/**
