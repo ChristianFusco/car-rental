@@ -6,15 +6,23 @@ public class Customer {
 	Customer(String name, PaymentBehavior paymentBehavior) {
 		this.name = name;
 		this.paymentBehavior = paymentBehavior;
-		this.car = null;
+		this.car = new NoCar();
 	}
 
 	public void makePayment(double amount) {
 		paymentBehavior.makePayment(amount);
 	}
 	
-	public void setCar(Car car) {
+	public void makePayment() {
+		paymentBehavior.makePayment(car.getPrice());
+	}
+	
+	public void rentCar(Car car) {
 		this.car = car;
+	}
+	
+	public void returnCar() {
+		this.car = new NoCar();
 	}
 	
 	/**
