@@ -8,6 +8,13 @@ public class RentalShop {
 		Car sedan = sedanFactory.makeCar();
 		System.out.println(sedan.getType());
 
+	//Decorator Test
+		System.out.println("Sedan Price: " + sedan.getPrice());
+		sedan = new HeatedSeats(sedan);
+		System.out.println("Added heated seats\nSedan Price: " + sedan.getPrice());
+		sedan = new Radio(sedan);
+		System.out.println("Added radio\nSedan Price: " + sedan.getPrice());
+		
 	//Behavior Test
 		PaymentBehavior paymentBehavior = new PaymentCreditCard(
 			"1111111111111111", "Testname", "123", "2018/07");

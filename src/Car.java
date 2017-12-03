@@ -1,3 +1,4 @@
 public interface Car {
-	public String getType();
+	public abstract String getType();
+	public abstract double getPrice();
 }
