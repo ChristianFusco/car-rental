@@ -2,11 +2,13 @@ public class Customer {
 	private String name;
 	private PaymentBehavior paymentBehavior;
 	private Car car;
+	private RentLength rentLength;
 
 	Customer(String name, PaymentBehavior paymentBehavior) {
 		this.name = name;
 		this.paymentBehavior = paymentBehavior;
 		this.car = new NoCar();
+		this.rentLength = new LengthZero();
 	}
 
 	public void makePayment(double amount) {
@@ -14,7 +16,9 @@ public class Customer {
 	}
 	
 	public void makePayment() {
-		paymentBehavior.makePayment(car.getPrice());
+		double price = car.getPrice() + rentLength.getPrice();
+		
+		paymentBehavior.makePayment(price);
 	}
 	
 	public void rentCar(Car car) {
@@ -23,6 +27,10 @@ public class Customer {
 	
 	public void returnCar() {
 		this.car = new NoCar();
+	}
+	
+	public void chooseRentLength(RentLength length) {
+		this.rentLength = length;
 	}
 	
 	/**

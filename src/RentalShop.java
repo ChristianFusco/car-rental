@@ -24,13 +24,18 @@ public class RentalShop {
 			"1111111111111111", "Testname", "123", "2018/07");
 		Customer customer = new Customer("Testname", paymentBehavior);
 		
+		//I didn't want to enter the password each time
 		//Rent Car test
 		customer.rentCar(sedan);
+		customer.chooseRentLength(new LengthTwoHours());
+		customer.makePayment();
+		
+		//Payment test
+		customer.chooseRentLength(new LengthTwelveHours());
 		customer.makePayment();
 		
 		//Return Car test
 		customer.returnCar();
-		customer.makePayment();
 		
 		//This one fails.
 		paymentBehavior = new PaymentCreditCard(
