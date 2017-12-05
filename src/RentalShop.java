@@ -8,7 +8,6 @@ public class RentalShop {
 		Car sedan = sedanFactory.makeCar();
 		System.out.println(sedan.getType());
 
-
 	//Decorator Test
 		System.out.println("Sedan Price: " + sedan.getPrice());
 		sedan = new HeatedSeats(sedan);
