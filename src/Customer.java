@@ -3,6 +3,7 @@ public class Customer {
 	private PaymentBehavior paymentBehavior;
 	private Car car;
 	private RentLength rentLength;
+	
 
 	Customer(String name, PaymentBehavior paymentBehavior) {
 		this.name = name;
@@ -26,6 +27,7 @@ public class Customer {
 	}
 	
 	public void returnCar() {
+		makePayment();
 		this.car = new NoCar();
 	}
 	
