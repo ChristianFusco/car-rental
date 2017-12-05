@@ -1,3 +1,6 @@
+# Stop having 6 different classpaths
+.classpath
+
 # Compiled class file
 *.class
 
