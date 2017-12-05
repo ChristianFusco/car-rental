@@ -3,12 +3,14 @@ public class Customer {
 	private PaymentBehavior paymentBehavior;
 	private Car car;
 	private RentLength rentLength;
+	private Discount discount;
 
 	Customer(String name, PaymentBehavior paymentBehavior) {
 		this.name = name;
 		this.paymentBehavior = paymentBehavior;
 		this.car = new NoCar();
 		this.rentLength = new LengthZero();
+		this.discount = new ProxyDiscount(new RealDiscount());
 	}
 
 	public void makePayment(double amount) {
@@ -18,6 +20,7 @@ public class Customer {
 	public void makePayment() {
 		double price = car.getPrice() + rentLength.getPrice();
 		
+		price = discount.applyDiscount(price);
 		paymentBehavior.makePayment(price);
 	}
 	
@@ -26,6 +29,7 @@ public class Customer {
 	}
 	
 	public void returnCar() {
+		makePayment();
 		this.car = new NoCar();
 	}
 	
