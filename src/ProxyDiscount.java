@@ -8,6 +8,11 @@ public class ProxyDiscount implements Discount {
 	
 	public double applyDiscount(double price) {
 		
-		return realDiscount.applyDiscount(price);
+		//if discount
+		//return realDiscount.applyDiscount(price);
+		
+		//else no discount
+		System.out.println("Sorry, no current discounts going on");
+		return price;
 	}
 }
