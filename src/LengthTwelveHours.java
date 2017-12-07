@@ -6,7 +6,7 @@ public class LengthTwelveHours implements RentLength {
 	
 	public LengthTwelveHours() {
 		length = "12 Hours";
-		price  = 24.00;
+		price  = 12.00;
 	}
 	
 	@Override

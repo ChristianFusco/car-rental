@@ -5,23 +5,42 @@ public class Customer {
 	private RentLength rentLength;
 	private Discount discount;
 
-	Customer(String name, PaymentBehavior paymentBehavior) {
+	Customer(String name) {
 		this.name = name;
-		this.paymentBehavior = paymentBehavior;
+		this.paymentBehavior = null;
 		this.car = new NoCar();
 		this.rentLength = new LengthZero();
 		this.discount = new ProxyDiscount(new RealDiscount());
 	}
 
+	public String getName() {
+		return name;
+	}
+	
 	public void makePayment(double amount) {
-		paymentBehavior.makePayment(amount);
+		
+		if(paymentBehavior != null) {
+			paymentBehavior.makePayment(amount);
+		}
+		else {
+			System.out.println("No payment behavior");
+		}
 	}
 	
 	public void makePayment() {
+		
+		if(paymentBehavior != null) {
 		double price = car.getPrice() + rentLength.getPrice();
+		
+		System.out.println("***drove for " + rentLength.getLength());
 		
 		price = discount.applyDiscount(price);
 		paymentBehavior.makePayment(price);
+		
+		}
+		else {
+			System.out.println("No payment behavior");
+		}
 	}
 	
 	public void rentCar(Car car) {
@@ -35,6 +54,10 @@ public class Customer {
 	
 	public void chooseRentLength(RentLength length) {
 		this.rentLength = length;
+	}
+	
+	public void setPaymentBehavior(PaymentBehavior behavior) {
+		this.paymentBehavior = behavior;
 	}
 	
 	/**
